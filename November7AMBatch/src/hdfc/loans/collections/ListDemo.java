@@ -22,6 +22,11 @@ public class ListDemo
 		System.out.println(a.indexOf("ravilella"));
 		System.out.println(a.hashCode());
 		
+		for(int i=0;i<a.size();i++)
+		{
+			System.out.println(a.get(i));
+		}
+		
 		System.out.println(a);
 		a.add(40);
 		System.out.println(a);
