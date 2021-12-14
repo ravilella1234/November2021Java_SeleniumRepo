@@ -9,7 +9,7 @@ public class TC_002 extends BaseTest
 		
 		launch("chromebrowser");
 		
-		navigateUrl("bestbuyurl");
+		navigateUrl("amazonurl");
 	}
 
 }
