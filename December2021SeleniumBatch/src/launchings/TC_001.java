@@ -9,7 +9,11 @@ public class TC_001 extends BaseTest
 		
 		launch("firefoxbrowser");
 
-		navigateUrl("amazonurl");
+		//navigateUrl("irctcurl");
+		navigateUrl("certificateurl");
+		
+		
+		
 	}
 
 }
