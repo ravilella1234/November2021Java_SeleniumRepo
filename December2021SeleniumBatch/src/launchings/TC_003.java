@@ -1,5 +1,10 @@
 package launchings;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 public class TC_003 extends BaseTest
 {
 
@@ -11,12 +16,23 @@ public class TC_003 extends BaseTest
 		
 		navigateUrl("amazonurl");
 		
-		selectOption("amazondropdown_id","Books");
+		//selectOption("amazondropdown_id","Books");
 		
-		typeText("amazontextbox_name","Harry Potter");
+		//typeText("amazontextbox_name","Harry Potter");
 		
-		clickElement("amazonsearchbutton_xpath");
-						
+		//clickElement("amazonsearchbutton_xpath");
+		
+		//driver.findElement(By.linkText("Customer Service")).click();
+		
+		//driver.findElement(By.partialLinkText("Customer Ser")).click();
+		
+		
+		List<WebElement> elements = driver.findElements(By.tagName("a"));
+		for(int i=0;i<elements.size();i++)
+		{
+			if(!elements.get(i).getText().isEmpty())
+			System.out.println(elements.get(i).getText());
+		}
 		
 		
 		  //WebElement loc = driver.findElement(By.id("searchDropdownBox"));
