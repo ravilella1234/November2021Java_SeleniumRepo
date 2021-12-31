@@ -25,5 +25,8 @@
 	<classpathentry kind="lib" path="C:/Users/ravi/Desktop/December 2021 drivers/jar_files/slf4j-api-1.7.30.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ravi/Desktop/December 2021 drivers/jar_files/webdrivermanager-4.4.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ravi/Downloads/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ravi/Desktop/December 2021 drivers/extentreports-4.0.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ravi/Desktop/December 2021 drivers/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ravi/Desktop/December 2021 drivers/bson-4.2.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
