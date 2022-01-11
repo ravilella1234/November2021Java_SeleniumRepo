@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RegressionSuite">
+
+  <test name="ChromeTest">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="pack.CheckBox1"/>
+      <class name="pack.LinksTesting1"/>
+      <class name="pack.TNG_001"/>
+      <class name="pack.RadioButton1"/>
+   	<!--   <class name="pack.DemoJavaClass"/>--> 
+    </classes>
+  </test> <!-- RegressionTest -->
+  
+  <test name="FirefoxTest">
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="pack.CheckBox1"/>
+      <class name="pack.LinksTesting1"/>
+      <class name="pack.TNG_001"/>
+      <class name="pack.RadioButton1"/>
+   	<!--   <class name="pack.DemoJavaClass"/>--> 
+    </classes>
+  </test> <!-- RrgressionTest -->
+  
+</suite> <!-- RegressionSuite -->

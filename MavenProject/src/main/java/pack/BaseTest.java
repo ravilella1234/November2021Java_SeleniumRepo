@@ -69,7 +69,7 @@ public class BaseTest
 	
 	public static void launch(String browser)
 	{
-		if(p.getProperty(browser).equals("chrome"))
+		if(browser.equals("chrome"))
 		{
 			 WebDriverManager.chromedriver().setup();
 			 
@@ -82,7 +82,7 @@ public class BaseTest
 			 
 			 driver = new ChromeDriver(option);
 		}
-		else if(p.getProperty(browser).equals("firefox"))
+		else if(browser.equals("firefox"))
 		{
 			 WebDriverManager.firefoxdriver().setup();
 			 
