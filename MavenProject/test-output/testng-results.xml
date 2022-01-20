@@ -1,73 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Clicked on Image Link]]>
-    </line>
   </reporter-output>
-  <suite started-at="2022-01-11T03:11:51Z" name="RegressionSuite" finished-at="2022-01-11T03:12:46Z" duration-ms="54832">
+  <suite started-at="2022-01-20T03:31:54Z" name="Suite" finished-at="2022-01-20T03:31:55Z" duration-ms="242">
     <groups>
     </groups>
-    <test started-at="2022-01-11T03:11:51Z" name="RrgressionTest" finished-at="2022-01-11T03:12:46Z" duration-ms="54832">
-      <class name="pack.RadioButton1">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:pack.RadioButton1@1d8bd0de]" started-at="2022-01-11T03:12:34Z" name="beforeMethod" finished-at="2022-01-11T03:12:42Z" duration-ms="8384" status="PASS">
+    <test started-at="2022-01-20T03:31:54Z" name="Test" finished-at="2022-01-20T03:31:55Z" duration-ms="242">
+      <class name="suitesParallel.NewTest">
+        <test-method signature="test2()[pri:0, instance:suitesParallel.NewTest@762ef0ea]" started-at="2022-01-20T03:31:55Z" name="test2" finished-at="2022-01-20T03:31:55Z" duration-ms="71" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="radioButtonTest()[pri:0, instance:pack.RadioButton1@1d8bd0de]" started-at="2022-01-11T03:12:42Z" name="radioButtonTest" finished-at="2022-01-11T03:12:44Z" duration-ms="1155" status="PASS">
+        </test-method> <!-- test2 -->
+        <test-method signature="test1()[pri:0, instance:suitesParallel.NewTest@762ef0ea]" started-at="2022-01-20T03:31:55Z" name="test1" finished-at="2022-01-20T03:31:55Z" duration-ms="71" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- radioButtonTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:pack.RadioButton1@1d8bd0de]" started-at="2022-01-11T03:12:44Z" name="afterMethod" finished-at="2022-01-11T03:12:46Z" duration-ms="2282" status="PASS">
+        </test-method> <!-- test1 -->
+        <test-method signature="test3()[pri:0, instance:suitesParallel.NewTest@762ef0ea]" started-at="2022-01-20T03:31:55Z" name="test3" finished-at="2022-01-20T03:31:55Z" duration-ms="33" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- pack.RadioButton1 -->
-      <class name="pack.TNG_001">
-        <test-method is-config="true" signature="startProcess()[pri:0, instance:pack.TNG_001@186f8716]" started-at="2022-01-11T03:12:16Z" name="startProcess" finished-at="2022-01-11T03:12:24Z" duration-ms="7693" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startProcess -->
-        <test-method signature="amazon()[pri:0, instance:pack.TNG_001@186f8716]" started-at="2022-01-11T03:12:24Z" name="amazon" finished-at="2022-01-11T03:12:32Z" duration-ms="8262" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amazon -->
-        <test-method is-config="true" signature="endProcess()[pri:0, instance:pack.TNG_001@186f8716]" started-at="2022-01-11T03:12:32Z" name="endProcess" finished-at="2022-01-11T03:12:34Z" duration-ms="1828" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endProcess -->
-      </class> <!-- pack.TNG_001 -->
-      <class name="pack.LinksTesting1">
-        <test-method is-config="true" signature="setup()[pri:0, instance:pack.LinksTesting1@5ab9e72c]" started-at="2022-01-11T03:12:07Z" name="setup" finished-at="2022-01-11T03:12:12Z" duration-ms="4996" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="linktesting1()[pri:0, instance:pack.LinksTesting1@5ab9e72c]" started-at="2022-01-11T03:12:12Z" name="linktesting1" finished-at="2022-01-11T03:12:14Z" duration-ms="1735" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Clicked on Image Link]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- linktesting1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:pack.LinksTesting1@5ab9e72c]" started-at="2022-01-11T03:12:14Z" name="tearDown" finished-at="2022-01-11T03:12:16Z" duration-ms="1981" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- pack.LinksTesting1 -->
-      <class name="pack.CheckBox1">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:pack.CheckBox1@2a266d09]" started-at="2022-01-11T03:11:51Z" name="beforeMethod" finished-at="2022-01-11T03:12:03Z" duration-ms="11907" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="checkboxTest()[pri:0, instance:pack.CheckBox1@2a266d09]" started-at="2022-01-11T03:12:03Z" name="checkboxTest" finished-at="2022-01-11T03:12:05Z" duration-ms="1549" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkboxTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:pack.CheckBox1@2a266d09]" started-at="2022-01-11T03:12:05Z" name="afterMethod" finished-at="2022-01-11T03:12:07Z" duration-ms="2969" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- pack.CheckBox1 -->
-    </test> <!-- RrgressionTest -->
-  </suite> <!-- RegressionSuite -->
+        </test-method> <!-- test3 -->
+      </class> <!-- suitesParallel.NewTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
