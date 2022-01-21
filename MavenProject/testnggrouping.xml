@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	
+	<groups>
+		<run>
+			<include name="regression"></include>
+		</run>
+	</groups>
+
+  <test thread-count="5" name="Test">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="pack.CheckBox1"/>
+      <class name="pack.LinksTesting1"/>
+      <class name="pack.TNG_001"/>
+      <class name="pack.RadioButton1"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
