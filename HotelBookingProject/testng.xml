@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BookingSuite">
+
+  <test thread-count="5" name="Create Booking Test- Applying Discount - pay@hotel">
+  <parameter name="action" value="pay@hotel"></parameter>
+  
+    <classes>
+   	  <class name="testcases.BookingSearch">
+   	  	<methods>
+   	  		<include name="searchHotel"></include>
+   	  		<include name="selectHotel"></include>
+   	  		<include name="entertGuestInformation"></include>
+   	  	</methods>
+   	  </class>
+   	  
+   	  <class name="testcases.PaymentManager">
+   	  	<methods>
+   	  		<include name="applyDiscount"></include>
+   	  		<include name="makePayment"></include>
+   	  	</methods>
+   	  </class>
+   	  
+      <class name="testcases.CustomerCommunication">
+      	<methods>
+   	  		<include name="checkEmailVerification"></include>
+   	  		<include name="checkMobileVerification"></include>
+   	  	</methods>
+      </class>
+      
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test thread-count="5" name="Create Booking Test- Applying Discount - electonicPayment">
+  <parameter name="action" value="electonicPayment"></parameter>
+    <classes>
+   	  <class name="testcases.BookingSearch">
+   	  	<methods>
+   	  		<include name="searchHotel"></include>
+   	  		<include name="selectHotel"></include>
+   	  		<include name="entertGuestInformation"></include>
+   	  	</methods>
+   	  </class>
+   	  
+   	  <class name="testcases.PaymentManager">
+   	  	<methods>
+   	  		<include name="applyDiscount"></include>
+   	  		<include name="makePayment"></include>
+   	  	</methods>
+   	  </class>
+   	  
+      <class name="testcases.CustomerCommunication">
+      	<methods>
+   	  		<include name="checkEmailVerification"></include>
+   	  		<include name="checkMobileVerification"></include>
+   	  	</methods>
+      </class>
+      
+    </classes>
+  </test> <!-- Test -->
+  
+   <test thread-count="5" name="modifiying Booking Test- Applying Discount - pay@hotel">
+  <parameter name="action" value="pay@hotel"></parameter>
+  
+    <classes>
+   	  <class name="testcases.BookingSearch">
+   	  	<methods>
+   	  		<include name="loadBooking"></include>
+   	  		<include name="selectHotel"></include>
+   	  		<include name="entertGuestInformation"></include>
+   	  	</methods>
+   	  </class>
+   	  
+   	  <class name="testcases.PaymentManager">
+   	  	<methods>
+   	  		<include name="applyDiscount"></include>
+   	  		<include name="makePayment"></include>
+   	  	</methods>
+   	  </class>
+   	  
+      <class name="testcases.CustomerCommunication">
+      	<methods>
+   	  		<include name="checkEmailVerification"></include>
+   	  		<include name="checkMobileVerification"></include>
+   	  	</methods>
+      </class>
+      
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

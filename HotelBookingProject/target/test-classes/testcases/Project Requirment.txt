@@ -1,0 +1,19 @@
+Travel website for to book a hotel rooms
+----------------------------------------
+
+Req1 : Goto the website + checkin date + checkout date + Adults + Select room Type + payments +        confirmation (mail/mobile)
+
+Req2 : Goto the website + checkin date + checkout date + Adults + Select room Type + payments(card,G-         pay,Bank) + confirmation (mail/mobile)
+
+Req3 : Goto the website + checkin date + checkout date + Adults + Select room Type + payments(card,G-         pay,Bank) / pay@hotel + confirmation (mail/mobile)
+
+Req4 : Goto the website + checkin date(within 7-days from today - no cancellation) + checkout date +          Adults + Select room Type + payments(card,G-pay,Bank) / pay@hotel + confirmation (mail/mobile)
+
+Req5 : Goto the website + checkin date(within 7-days from today - no cancellation) + checkout date +          Adults + Select room Type + payments(card,G-pay,Bank) (10-20% off) / pay@hotel (5-10% off) +        confirmation (mail/mobile)
+
+
+make a new Hotel Booking : search for hotel, select a Room, enter the guest info, Apply Discounts,                            Make a payment, check for confirmation
+
+Modify the Existing Booking : Load the Existing Booking, modify (rooms/persons),Apply Discounts                              ,Payment, check for confirmation
+
+Cancel the booked Hotel
