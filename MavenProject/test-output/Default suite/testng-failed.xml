@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pack.TestDependency">
+      <class name="excelOperations.DataManagementWithDataProvider">
         <methods>
-          <include name="blue"/>
-          <include name="white"/>
-          <include name="orange"/>
-          <include name="green"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- pack.TestDependency -->
+      </class> <!-- excelOperations.DataManagementWithDataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
