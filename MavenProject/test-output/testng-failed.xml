@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="excelOperations.DataManagementWithDataProvider">
+      <class name="pageobjectmodel.POM_001">
         <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
           <include name="f"/>
         </methods>
-      </class> <!-- excelOperations.DataManagementWithDataProvider -->
+      </class> <!-- pageobjectmodel.POM_001 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
