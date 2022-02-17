@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-08T03:08:25Z" name="Default suite" finished-at="2022-02-08T03:08:47Z" duration-ms="22359">
+  <suite started-at="2022-02-17T03:29:08Z" name="Default suite" finished-at="2022-02-17T03:29:22Z" duration-ms="13759">
     <groups>
     </groups>
-    <test started-at="2022-02-08T03:08:25Z" name="Default test" finished-at="2022-02-08T03:08:47Z" duration-ms="22359">
-      <class name="pageobjectmodel.POM_001">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:pageobjectmodel.POM_001@3e96bacf]" started-at="2022-02-08T03:08:25Z" name="beforeMethod" finished-at="2022-02-08T03:08:42Z" duration-ms="17107" status="PASS">
+    <test started-at="2022-02-17T03:29:08Z" name="Default test" finished-at="2022-02-17T03:29:22Z" duration-ms="13759">
+      <class name="actions.MouseOperations">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:actions.MouseOperations@26275bef]" started-at="2022-02-17T03:29:08Z" name="beforeMethod" finished-at="2022-02-17T03:29:15Z" duration-ms="6909" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="f()[pri:0, instance:pageobjectmodel.POM_001@3e96bacf]" started-at="2022-02-08T03:08:42Z" name="f" finished-at="2022-02-08T03:08:47Z" duration-ms="5166" status="PASS">
+        <test-method signature="autosuggetion()[pri:0, instance:actions.MouseOperations@26275bef]" started-at="2022-02-17T03:29:15Z" name="autosuggetion" finished-at="2022-02-17T03:29:22Z" duration-ms="6766" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:pageobjectmodel.POM_001@3e96bacf]" started-at="2022-02-08T03:08:47Z" name="afterMethod" finished-at="2022-02-08T03:08:47Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- pageobjectmodel.POM_001 -->
+        </test-method> <!-- autosuggetion -->
+      </class> <!-- actions.MouseOperations -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

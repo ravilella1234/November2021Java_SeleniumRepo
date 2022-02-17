@@ -1,5 +1,6 @@
 package switches;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -28,7 +29,7 @@ public class SwitchWindow1
 		String parentWindow = driver.getWindowHandle();
 		System.out.println(parentWindow);
 		System.out.println(driver.getTitle());
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		
 		while(!(wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//img[@alt='personal loan'][@class='lazy loaded']")))).isDisplayed())
 		{
