@@ -2,7 +2,7 @@ package testcases;
 
 import org.testng.annotations.Test;
 
-public class PortifolioManagement 
+public class PortifolioManagement extends BaseTest
 {
 	
   @Test
