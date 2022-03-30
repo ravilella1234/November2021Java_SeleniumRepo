@@ -1,5 +1,8 @@
 package keywords;
 
+import java.io.FileInputStream;
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +15,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class GenericKeywords  extends ValidationKeywords
 {
 	public WebDriver driver;
+	public  String projectPath = System.getProperty("user.dir");
+	public  FileInputStream fis;
+    public  Properties orprop;
+	public Properties mainprop;
+	public Properties childProp;
 	
 	
 	public void openBrowser(String browser)
