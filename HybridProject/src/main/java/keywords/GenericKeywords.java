@@ -10,6 +10,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GenericKeywords  extends ValidationKeywords
@@ -20,10 +23,13 @@ public class GenericKeywords  extends ValidationKeywords
     public  Properties orprop;
 	public Properties mainprop;
 	public Properties childProp;
+	public ExtentTest test;
 	
 	
 	public void openBrowser(String browser)
 	{
+		log("Opening Browser :" + browser);
+		//test.log(Status.INFO, "Opening Browser :" + browser);
 		if(browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -34,16 +40,22 @@ public class GenericKeywords  extends ValidationKeywords
 	
 	public void navigate(String url)
 	{
+		log("Navigating to Url : " + url);
+		//test.log(Status.INFO, "Navigating to Url : " + url);
 		driver.navigate().to(url);
 	}
 	
 	public void click(String locatorKey)
 	{
+		log("Clicking on element :"+locatorKey);
+		//test.log(Status.INFO, "Clicking on element :"+locatorKey);
 		getElement(locatorKey).click();
 	}
 	
-	public void type(String locatorKey, String text)
+	public void type(String locatorKey, String text)s
 	{
+		log("Typing text :" +text+"By ussing locator :"+ locatorKey);
+		//test.log(Status.INFO, "Typing text :" +text+"By ussing locator :"+ locatorKey);
 		getElement(locatorKey).sendKeys(text);
 	}
 	
@@ -107,6 +119,17 @@ public class GenericKeywords  extends ValidationKeywords
 		}
 		return by;
 		
+	}
+	
+	public void setReport(ExtentTest test)
+	{
+		this.test = test;
+	}
+	
+	//Reporting Function
+	public void log(String msg)
+	{
+		test.log(Status.INFO, msg);
 	}
 	
 }
