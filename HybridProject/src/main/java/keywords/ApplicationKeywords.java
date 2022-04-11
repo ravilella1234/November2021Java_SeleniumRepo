@@ -4,7 +4,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Properties;
 
-public class ApplicationKeywords  extends GenericKeywords
+import org.testng.asserts.SoftAssert;
+
+public class ApplicationKeywords  extends ValidationKeywords
 {
 	
 	public ApplicationKeywords() throws Exception 
@@ -18,6 +20,7 @@ public class ApplicationKeywords  extends GenericKeywords
 			fis = new FileInputStream(projectPath+"\\src\\test\\resources\\environment.properties");
 			mainprop.load(fis);
 			String e = mainprop.getProperty("env");
+			System.out.println(e);
 			
 			fis = new FileInputStream(projectPath+"\\src\\test\\resources\\"+e+".properties");
 			childProp.load(fis);
@@ -31,6 +34,7 @@ public class ApplicationKeywords  extends GenericKeywords
 			e.printStackTrace();
 		 }
 		
+		 softAssert = new SoftAssert();
 	}
 
 	public void cutomerLogin()

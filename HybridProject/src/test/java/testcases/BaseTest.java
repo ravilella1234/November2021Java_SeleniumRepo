@@ -1,6 +1,8 @@
 package testcases;
 
 import org.testng.ITestContext;
+import org.testng.SkipException;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
@@ -13,6 +15,8 @@ import reportings.ExtentManager;
 
 public class BaseTest 
 {
+	
+//acceptable Failure, Critical Failure, Unexpected Failure	
  
   public  ApplicationKeywords app;
   public static String projectPath = System.getProperty("user.dir") ;
@@ -24,9 +28,7 @@ public class BaseTest
   {
 	  app = new ApplicationKeywords();
 	  context.setAttribute("app", app);
-	  app.openBrowser("chrome");
-	  app.navigate("https://money.rediff.com/index.html");
-	  
+	  	  
 	  //init the Reporting for the Test
 	  rep = ExtentManager.getReports();
 	  test =  rep.createTest(context.getCurrentXmlTest().getName());
@@ -40,9 +42,25 @@ public class BaseTest
   @BeforeMethod
   public void beforeMethod(ITestContext context)
   {
+	  test = (ExtentTest)context.getAttribute("test");
+	  String criticalFailure = (String)context.getAttribute("criticalFailure");
+	  if(criticalFailure != null && criticalFailure.equals("Y"))
+	  {
+		  test.log(Status.SKIP, "criticalFailure in Test");
+		  throw new SkipException("criticalFailure in Test"); // It skips in TesstNG
+	  }
 	 app  =  (ApplicationKeywords)context.getAttribute("app");
 	 rep  =  (ExtentReports)context.getAttribute("report");
-	 test = (ExtentTest)context.getAttribute("test");
+	 
   }
+  
+  @AfterTest
+  public void quit()
+  {
+	  if(rep!=null)
+		  rep.flush();
+  }
+  
+ 
 
 }

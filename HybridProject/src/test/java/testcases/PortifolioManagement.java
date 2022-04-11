@@ -10,7 +10,8 @@ public class PortifolioManagement extends BaseTest
   @Test
   public void createPortifolio() 
   {
-	  test.log(Status.INFO, "createPortifolio");	  
+	  test.log(Status.INFO, "createPortifolio");	
+	  app.reportFailure("Some non critical failure...",false);
   }
   
   @Test()

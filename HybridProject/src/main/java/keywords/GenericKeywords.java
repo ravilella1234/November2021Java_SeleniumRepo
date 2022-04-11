@@ -9,13 +9,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
+import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class GenericKeywords  extends ValidationKeywords
+public class GenericKeywords  
 {
 	public WebDriver driver;
 	public  String projectPath = System.getProperty("user.dir");
@@ -24,16 +26,16 @@ public class GenericKeywords  extends ValidationKeywords
 	public Properties mainprop;
 	public Properties childProp;
 	public ExtentTest test;
-	
-	
+	SoftAssert softAssert;	
+
 	public void openBrowser(String browser)
 	{
 		log("Opening Browser :" + browser);
 		//test.log(Status.INFO, "Opening Browser :" + browser);
-		if(browser.equals("chrome")) {
+		if(childProp.getProperty(browser).equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		}else if(browser.equals("firefox")) {
+		}else if(childProp.getProperty(browser).equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 		}
 	}
@@ -42,7 +44,7 @@ public class GenericKeywords  extends ValidationKeywords
 	{
 		log("Navigating to Url : " + url);
 		//test.log(Status.INFO, "Navigating to Url : " + url);
-		driver.navigate().to(url);
+		driver.navigate().to(childProp.getProperty(url));
 	}
 	
 	public void click(String locatorKey)
@@ -52,7 +54,7 @@ public class GenericKeywords  extends ValidationKeywords
 		getElement(locatorKey).click();
 	}
 	
-	public void type(String locatorKey, String text)s
+	public void type(String locatorKey, String text)
 	{
 		log("Typing text :" +text+"By ussing locator :"+ locatorKey);
 		//test.log(Status.INFO, "Typing text :" +text+"By ussing locator :"+ locatorKey);
@@ -103,19 +105,19 @@ public class GenericKeywords  extends ValidationKeywords
 	{
 		By by=null;
 		if(locatorKey.endsWith("_id")) {
-			by = By.id(locatorKey);
+			by = By.id(orprop.getProperty(locatorKey));
 		}else if(locatorKey.endsWith("_name")) {
-			by = By.name(locatorKey);
+			by = By.name(orprop.getProperty(locatorKey));
 		}else if(locatorKey.endsWith("className")) {
-			by = By.className(locatorKey);
+			by = By.className(orprop.getProperty(locatorKey));
 		}else if(locatorKey.endsWith("xpath")) {
-			by = By.xpath(locatorKey);
+			by = By.xpath(orprop.getProperty(locatorKey));
 		}else if(locatorKey.endsWith("css")){
-			by = By.cssSelector(locatorKey);
+			by = By.cssSelector(orprop.getProperty(locatorKey));
 		}else if(locatorKey.endsWith("linktext")) {
-			by = By.linkText(locatorKey);
+			by = By.linkText(orprop.getProperty(locatorKey));
 		}else if(locatorKey.endsWith("_partiallinktext")) {
-			by = By.partialLinkText(locatorKey);
+			by = By.partialLinkText(orprop.getProperty(locatorKey));
 		}
 		return by;
 		
@@ -130,6 +132,23 @@ public class GenericKeywords  extends ValidationKeywords
 	public void log(String msg)
 	{
 		test.log(Status.INFO, msg);
+	}
+	
+	public void reportFailure(String failureMsg,boolean stopOnFailure)
+	{
+		System.out.println(failureMsg); // failure msg in Console
+		test.log(Status.FAIL, failureMsg); // failure msg in Extent Reports
+		softAssert.fail(failureMsg);  // failure in TestNG Reports
+		
+		if(stopOnFailure)
+			assertAll(); // reports all the failures
+			
+	}
+	
+	public void assertAll()
+	{
+		Reporter.getCurrentTestResult().getTestContext().setAttribute("criticalFailure", "Y");
+		softAssert.assertAll();
 	}
 	
 }

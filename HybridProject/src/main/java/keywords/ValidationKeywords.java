@@ -1,11 +1,11 @@
 package keywords;
 
-public class ValidationKeywords 
+public class ValidationKeywords extends GenericKeywords
 {
 
 	public void validateTitle()
 	{
-		
+	
 	}
 	
 	public void validateText()
@@ -13,9 +13,10 @@ public class ValidationKeywords
 		
 	}
 	
-	public void validateElementPresent()
+	public void validateElementPresent(String locator)
 	{
-		
+		//failure
+		reportFailure("Element is not Found :" + locator,true);
 	}
 	
 }
