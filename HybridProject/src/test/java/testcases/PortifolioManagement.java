@@ -12,6 +12,7 @@ public class PortifolioManagement extends BaseTest
   {
 	  test.log(Status.INFO, "createPortifolio");	
 	  app.reportFailure("Some non critical failure...",false);
+	  app.assertAll();
   }
   
   @Test()

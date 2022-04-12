@@ -1,56 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="7" passed="2" failed="0" skipped="0">
+<testng-results ignored="5" total="7" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-11T01:50:27Z" name="Suite" finished-at="2022-04-11T01:50:51Z" duration-ms="23486">
+  <suite started-at="2022-04-12T01:36:20Z" name="Suite" finished-at="2022-04-12T01:36:41Z" duration-ms="21420">
     <groups>
     </groups>
-    <test started-at="2022-04-11T01:50:27Z" name="Create PortifolioTest" finished-at="2022-04-11T01:50:51Z" duration-ms="23486">
+    <test started-at="2022-04-12T01:36:20Z" name="Create PortifolioTest" finished-at="2022-04-12T01:36:41Z" duration-ms="21420">
       <class name="testcases.PortifolioManagement">
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.PortifolioManagement@671a5887]" started-at="2022-04-11T01:50:49Z" name="beforeMethod" finished-at="2022-04-11T01:50:49Z" duration-ms="1" status="PASS">
+        <test-method signature="createPortifolio()[pri:0, instance:testcases.PortifolioManagement@671a5887]" started-at="2022-04-12T01:36:40Z" name="createPortifolio" finished-at="2022-04-12T01:36:40Z" duration-ms="212" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+test is incorrect,
+Some non critical failure...]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+test is incorrect,
+Some non critical failure...
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at keywords.GenericKeywords.assertAll(GenericKeywords.java:159)
+at testcases.PortifolioManagement.createPortifolio(PortifolioManagement.java:15)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPortifolio -->
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.PortifolioManagement@671a5887]" started-at="2022-04-12T01:36:40Z" name="beforeMethod" finished-at="2022-04-12T01:36:40Z" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@ffaaaf0]]>
+                <![CDATA[org.testng.TestRunner@1abfe081]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="createPortifolio()[pri:0, instance:testcases.PortifolioManagement@671a5887]" started-at="2022-04-11T01:50:49Z" name="createPortifolio" finished-at="2022-04-11T01:50:49Z" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createPortifolio -->
       </class> <!-- testcases.PortifolioManagement -->
       <class name="testcases.Session">
-        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.Session@36d585c]" started-at="2022-04-11T01:50:27Z" name="beforeTest" finished-at="2022-04-11T01:50:28Z" duration-ms="674" status="PASS">
+        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:testcases.Session@36d585c]" started-at="2022-04-12T01:36:20Z" name="beforeTest" finished-at="2022-04-12T01:36:21Z" duration-ms="764" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@ffaaaf0]]>
+                <![CDATA[org.testng.TestRunner@1abfe081]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.Session@36d585c]" started-at="2022-04-11T01:50:28Z" name="beforeMethod" finished-at="2022-04-11T01:50:28Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:testcases.Session@36d585c]" started-at="2022-04-12T01:36:21Z" name="beforeMethod" finished-at="2022-04-12T01:36:21Z" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@ffaaaf0]]>
+                <![CDATA[org.testng.TestRunner@1abfe081]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="doLogin()[pri:0, instance:testcases.Session@36d585c]" started-at="2022-04-11T01:50:28Z" name="doLogin" finished-at="2022-04-11T01:50:49Z" duration-ms="21481" status="PASS">
+        <test-method signature="doLogin()[pri:0, instance:testcases.Session@36d585c]" started-at="2022-04-12T01:36:21Z" name="doLogin" finished-at="2022-04-12T01:36:40Z" duration-ms="18920" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLogin -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.Session@36d585c]" started-at="2022-04-11T01:50:49Z" name="quit" finished-at="2022-04-11T01:50:51Z" duration-ms="1271" status="PASS">
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.Session@36d585c]" started-at="2022-04-12T01:36:40Z" name="quit" finished-at="2022-04-12T01:36:41Z" duration-ms="1460" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->

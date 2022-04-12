@@ -11,14 +11,6 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- testcases.PortifolioManagement -->
-      <class name="testcases.Session">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="doLogin"/>
-          <include name="quit"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- testcases.Session -->
     </classes>
   </test> <!-- Create PortifolioTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
