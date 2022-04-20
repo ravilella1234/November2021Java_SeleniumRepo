@@ -149,6 +149,7 @@ public class GenericKeywords
 		softAssert.fail(failureMsg);  // failure in TestNG Reports
 		
 		if(stopOnFailure)
+			
 			assertAll(); // reports all the failures
 			
 	}
