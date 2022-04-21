@@ -35,6 +35,10 @@ public class BaseTest
 	  test.log(Status.INFO, "starting the test :" + context.getCurrentXmlTest().getName());
 	  
 	  app.setReport(test);
+	  
+	  app.openBrowser("Chrome");
+      app.defaultLogin();	
+	  
 	  context.setAttribute("report", rep);
 	  context.setAttribute("test", test);
   }
